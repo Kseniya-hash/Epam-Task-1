@@ -9,6 +9,7 @@
 package task3;
 
 import java.math.*;
+import for_all_tasks.Validation;
 
 /**
  * Class for working with area of the square
@@ -21,6 +22,10 @@ public class Area {
 	 * @return side of the square
 	 */
 	public static double getSideOfSquare(double area) {
+		if (Validation.isNegative(area)) {
+			throw new IllegalArgumentException("Invalid value for area. "
+											  + "Can not be below zero");
+		}
 		return Math.sqrt(area);
 	}
 	
@@ -32,6 +37,10 @@ public class Area {
 		final double RATIO = 1 / Math.sqrt(2);		// Side to diagonal ratio
 		double side = diagonal * RATIO;
 		
+		if (Validation.isNegative(diagonal)) {
+			throw new IllegalArgumentException("Invalid value for diagonal. "
+											  + "Can not be below zero");
+		}
 		return Math.pow(side, 2);
 	}
 	
@@ -41,6 +50,11 @@ public class Area {
 	 * @return area1 to area2 ratio
 	 */
 	public static double getRatio(double area1, double area2) {
+		if (Validation.isNegative(area1) || Validation.isNegative(area2)
+										 || (area2 == 0)) {
+			throw new IllegalArgumentException("Invalid value for area."
+											  + "Can not be below zero");
+		}
 		return area1/area2;
 	}
 

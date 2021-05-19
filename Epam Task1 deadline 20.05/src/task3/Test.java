@@ -18,6 +18,7 @@ public class Test {
 		double smallerArea;		//area of the square inscribed in a circle
 	
 		System.out.println("Введите площадь квадрата:");
+		try {
 		area = Reader.readDouble();
 		diameter = Area.getSideOfSquare(area);
 		smallerArea = Area.getAreafromDiagonal(diameter);
@@ -25,5 +26,8 @@ public class Test {
 						  + "Площадь квадрата, вписанного в окружность " + smallerArea + "\n"
 						  + "Площадь вписанного квадрада меньше площади заданного в "
 						  + Area.getRatio(area, smallerArea ) + " раза");
+		} catch (IllegalArgumentException e){
+			System.out.println(e.getMessage());
+		}
 	}
 }

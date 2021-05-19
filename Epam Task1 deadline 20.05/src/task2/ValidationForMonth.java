@@ -1,6 +1,6 @@
 package task2;
 
-public class Validation {
+public class ValidationForMonth {
 	
 	/** Check if n is valid number for a month */
 	public static boolean isMonth(int n) {

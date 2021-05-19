@@ -20,12 +20,12 @@ public class Test {
 		year = Reader.readInt();
 		System.out.println("Введите месяц:");
 		month = Reader.readInt();
+		try {
 		if(YearMonth.isLeapYear(year)) {
 			System.out.println("Год високосный");
 		} else {
 			System.out.println("Год не високосный");
 		}
-		try {
 		System.out.println("В " + month + " месяце "
 						  + YearMonth.getDaysInMonth(year, month) + " дней");	
 		} catch (IllegalArgumentException e){

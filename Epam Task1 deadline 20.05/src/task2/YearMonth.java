@@ -7,6 +7,9 @@
  */
 
 package task2;
+
+import for_all_tasks.Validation;
+
 /**
  * class for finding leap years and number of days per month
  * @author Ксения
@@ -18,6 +21,9 @@ public class YearMonth {
 		final int EXCEPTIONYEAR = 100; 
 		final int NOTEXCEPTIONYEAR = 400; 
 		
+		if (Validation.isNegative(year)) {
+			throw new IllegalArgumentException("Invalid value for year");
+		}
 		if ((year % NOTEXCEPTIONYEAR) == 0) {
 			return true;
 		} else if ((year % EXCEPTIONYEAR) == 0){
@@ -33,7 +39,7 @@ public class YearMonth {
 		final int FEBRUARY = 2;
 		final int JULY = 7;
 		
-		if (!Validation.isMonth(month)) {
+		if (!ValidationForMonth.isMonth(month)) {
 			throw new IllegalArgumentException("Invalid value for month");
 		}
 		if(month == FEBRUARY) {

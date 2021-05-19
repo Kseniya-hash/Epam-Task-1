@@ -17,8 +17,12 @@ public class Test {
 		
 		System.out.println("Введите радиус круга:");
 		radius = Reader.readDouble();
+		try {
 		System.out.println("Площадь круга: " + Circle.getArea(radius) + "\n"
 						  + "Длина его окружности: " + Circle.getCircumference(radius));
+		} catch (IllegalArgumentException e){
+			System.out.println(e.getMessage());
+		}
 	}
 
 }
