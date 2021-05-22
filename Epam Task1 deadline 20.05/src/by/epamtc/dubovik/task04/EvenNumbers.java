@@ -10,7 +10,7 @@ package by.epamtc.dubovik.task04;
 /**
  * Class for checking if number is even.
  * Counting number of even in an array.
- * @author Ксения
+ * @author Kseniya
  */
 public class EvenNumbers {
 	

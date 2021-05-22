@@ -13,7 +13,7 @@ import by.epamtc.dubovik.for_all_tasks.Validation;
 
 /**
  * class for calculating area and circumference of a circle
- * @author Ксения
+ * @author Kseniya
  *
  */
 public class Circle {

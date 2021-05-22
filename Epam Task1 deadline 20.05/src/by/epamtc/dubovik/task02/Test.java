@@ -16,18 +16,18 @@ public class Test {
 		int year;
 		int month;
 		
-		System.out.println("Введите год:");
+		System.out.println("Р’РІРµРґРёС‚Рµ РіРѕРґ:");
 		year = Reader.readInt();
-		System.out.println("Введите месяц:");
+		System.out.println("Р’РІРµРґРёС‚Рµ РјРµСЃСЏС†:");
 		month = Reader.readInt();
 		try {
 		if(YearMonth.isLeapYear(year)) {
-			System.out.println("Год високосный");
+			System.out.println("Р“РѕРґ РІРёСЃРѕРєРѕСЃРЅС‹Р№");
 		} else {
-			System.out.println("Год не високосный");
+			System.out.println("Р“РѕРґ РЅРµ РІРёСЃРѕРєРѕСЃРЅС‹Р№");
 		}
-		System.out.println("В " + month + " месяце "
-						  + YearMonth.calculateDaysInMonth(year, month) + " дней");	
+		System.out.println("Р’ " + month + " РјРµСЃСЏС†Рµ "
+						  + YearMonth.calculateDaysInMonth(year, month) + " РґРЅРµР№");	
 		} catch (Exception e){
 			System.out.println(e.getMessage());
 		}

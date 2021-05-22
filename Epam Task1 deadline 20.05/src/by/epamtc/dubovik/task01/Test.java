@@ -14,10 +14,10 @@ public class Test {
 	public static void main(String args[]) {
 		int number;
 		
-		System.out.println("Введите целое число");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ:");
 		number = Reader.readInt();
 		int lastDigitOfN = LastDigit.calculateLastDigit(number);
-		System.out.println("Последняя цифра квадрата: "
+		System.out.println("РџРѕСЃР»РµРґРЅСЏСЏ С†РёС„СЂР° РєРІР°РґСЂР°С‚Р°: "
 						   + LastDigit.calculateLastDigitOfsquare(lastDigitOfN));
 	}
 

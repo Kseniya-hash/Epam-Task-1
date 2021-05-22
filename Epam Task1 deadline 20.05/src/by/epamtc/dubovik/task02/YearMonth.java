@@ -12,7 +12,7 @@ import by.epamtc.dubovik.for_all_tasks.Validation;
 
 /**
  * class for finding leap years and number of days per month
- * @author Ксения
+ * @author Kseniya
  */
 public class YearMonth {
 	/**check if year is leap*/

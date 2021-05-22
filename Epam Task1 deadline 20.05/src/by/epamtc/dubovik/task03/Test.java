@@ -17,15 +17,15 @@ public class Test {
 		double diameter;		//diameter of the circle inscribed in a square
 		double smallerArea;		//area of the square inscribed in a circle
 	
-		System.out.println("Введите площадь квадрата:");
+		System.out.println("Р’РІРµРґРёС‚Рµ РїР»РѕС‰Р°РґСЊ РєРІР°РґСЂР°С‚Р°:");
 		try {
 		area = Reader.readDouble();
 		diameter = Area.calculateSideOfSquare(area);
 		smallerArea = Area.calculateAreafromDiagonal(diameter);
-		System.out.println("Диаметр круга, вписанного в квадрат:" + diameter + "\n"
-						  + "Площадь квадрата, вписанного в окружность " + smallerArea + "\n"
-						  + "Площадь вписанного квадрада меньше площади заданного в "
-						  + Area.calculateRatio(area, smallerArea ) + " раза");
+		System.out.println("Р”РёР°РјРµС‚СЂ РєСЂСѓРіР°, РІРїРёСЃР°РЅРЅРѕРіРѕ РІ РєРІР°РґСЂР°С‚:" + diameter + "\n"
+						  + "РџР»РѕС‰Р°РґСЊ РєРІР°РґСЂР°С‚Р°, РІРїРёСЃР°РЅРЅРѕРіРѕ РІ РєСЂСѓРі " + smallerArea + "\n"
+						  + "РџР»РѕС‰Р°РґСЊ РїРµСЂРІРѕРіРѕ РєРІР°РґСЂР°С‚Р° Р±РѕР»СЊС€Рµ РїР»РѕС‰Р°РґРё РІС‚РѕСЂРѕРіРѕ РІ "
+						  + Area.calculateRatio(area, smallerArea ) + " СЂР°Р·Р°");
 		} catch (Exception e){
 			System.out.println(e.getMessage());
 		}

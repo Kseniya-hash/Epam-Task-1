@@ -14,7 +14,7 @@ import by.epamtc.dubovik.for_all_tasks.Reader;
 
 /**
  * Class for checking which point is closer to the origin
- * @author Ксения
+ * @author Kseniya
  *
  */
 public class PointLogic {

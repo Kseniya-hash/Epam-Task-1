@@ -12,7 +12,7 @@ import java.math.*;
 
 /**
  * Class for working with last digit of number
- * @author Ксения
+ * @author Kseniya
  */
 public class LastDigit {
 	private final static int BASE = 10;		// Base of numeral system

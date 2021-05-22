@@ -12,7 +12,7 @@ import by.epamtc.dubovik.for_all_tasks.Validation;
 
 /**
  * Class for counting how many hours, minutes and seconds passed.
- * @author Ксения
+ * @author Kseniya
  *
  */
 public class CountTime {

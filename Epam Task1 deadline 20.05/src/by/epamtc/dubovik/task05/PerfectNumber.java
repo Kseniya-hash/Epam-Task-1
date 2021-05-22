@@ -13,7 +13,7 @@ import by.epamtc.dubovik.for_all_tasks.Validation;
 
 /**
  * Class for checking if number is perfect
- * @author Ксения
+ * @author Kseniya
  *
  */
 public class PerfectNumber {

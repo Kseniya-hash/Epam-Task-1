@@ -17,15 +17,19 @@ public class Test {
 		double finish;
 		double step;
 		
-		System.out.println("Введите начало интервала");
+		System.out.println("Р’РІРµРґРёС‚Рµ РЅР°С‡Р°Р»Рѕ РѕС‚СЂРµР·РєР°");
 		start = Reader.readDouble();
-		System.out.println("Введите конец интервала");
+		System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРЅРµС† РѕС‚СЂРµР·РєР°");
 		finish = Reader.readDouble();
-		System.out.println("Введите шаг функции");
+		System.out.println("Р’РІРµРґРёС‚Рµ С€Р°Рі С„СѓРЅРєС†РёРё");
 		step = Reader.readDouble();
+		try {
 		FunctionArray array = new FunctionArray(start, finish, step);
-		System.out.println("Результат:");
+		System.out.println("РўР°Р±Р»РёС†Р° Р·РЅР°С‡РµРЅРёР№:");
 		System.out.println(array.toString());
+		} catch  (Exception e){
+			System.out.println(e.getMessage());
+		}
 	}
 
 }

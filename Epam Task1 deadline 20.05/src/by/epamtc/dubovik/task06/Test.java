@@ -15,12 +15,12 @@ public class Test {
 	public static void main(String args[]) {
 		int seconds;
 		
-		System.out.println("Введите число секунд:");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ СЃРµРєСѓРЅРґ:");
 		seconds = Reader.readInt();
 		try {
-			System.out.println("Прошло " + CountTime.calculateHours(seconds) + " часов "
-							  + CountTime.calculateMinutes(seconds) + " минут "
-							  + CountTime.calculateSeconds(seconds)+ " секунд.");
+			System.out.println("РџСЂРѕС€Р»Рѕ " + CountTime.calculateHours(seconds) + " С‡Р°СЃРѕРІ "
+							  + CountTime.calculateMinutes(seconds) + " РјРёРЅСѓС‚ "
+							  + CountTime.calculateSeconds(seconds)+ " СЃРµРєСѓРЅРґ.");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

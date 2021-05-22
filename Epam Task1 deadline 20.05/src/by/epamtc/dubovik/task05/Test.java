@@ -14,7 +14,7 @@ public class Test {
 	public static void main(String args[]) {
 		int n;
 		
-		System.out.println("Введите число:");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ:");
 		n = Reader.readInt();
 		try {
 		System.out.println(PerfectNumber.isPerfect(n));

@@ -14,11 +14,12 @@ public class Test {
 		Point p1;		//first point
 		Point p2;		//second point
 		
-		System.out.println("Введите точку:");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‚РѕС‡РєСѓ:");
 		p1 = PointLogic.readPoint();
-		System.out.println("Введите точку:");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‚РѕС‡РєСѓ:");
 		p2 = PointLogic.readPoint();
 		
-		System.out.println("Точка " + PointLogic.closerToOrigin(p1, p2).toString() + " ближе к началу координат.");
+		System.out.println("РўРѕС‡РєР°" + PointLogic.closerToOrigin(p1, p2).toString()
+						  + " Р±Р»РёР¶Рµ Рє РЅР°С‡Р°Р»Сѓ РєРєРѕРѕСЂРґРёРЅР°С‚.");
 	}
 }

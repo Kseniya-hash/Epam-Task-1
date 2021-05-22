@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Contains methods for reading from console
- * @author Ксения
+ * @author Kseniya
  *
  */
 public class Reader {

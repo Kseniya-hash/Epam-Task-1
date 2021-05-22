@@ -15,8 +15,8 @@ public class Test {
 	public static void main(String args[]) {
 		double x;
 		
-		System.out.println("Введите х:");
+		System.out.println("Р’РІРµРґРёС‚Рµ С…:");
 		x = Reader.readDouble();
-		System.out.println("Значение в этой точке: " + Function.function(x));
+		System.out.println("Р—РЅР°С‡РµРЅРёРµ РІ С‚РѕС‡РєРµ С…: " + Function.function(x));
 	}
 }

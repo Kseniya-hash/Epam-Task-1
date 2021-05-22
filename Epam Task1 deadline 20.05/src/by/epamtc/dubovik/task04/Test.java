@@ -17,7 +17,7 @@ public class Test {
 		int length = 4;			//length of array
 		int[] array;			//array of numbers
 		
-		System.out.println("Ââåäèòå 4 ÷èñëà");
+		System.out.println("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 4 Ñ‡Ğ¸ÑĞ»Ğ°");
 		array = Reader.readArray(length);
 		System.out.println(EvenNumbers.containsNEven(array, countOfEven));
 	}

@@ -6,13 +6,17 @@ public class FunctionArray {
 	private double step;		//step in the interval
 	private FunctionInX[] arrayOfX;
 	
-	public FunctionArray(double start, double finish, double step){
+	public FunctionArray(double start, double finish, double step) throws Exception {
 		double currentStep = start;
 		int length = (int)((finish - start) / step + 1);
 		arrayOfX = new FunctionInX[length];
 		this.start = start;
 		this.finish = finish;
 		this.step = step;
+		
+		if(finish < start) {
+			throw new Exception("Invalid argument");
+		}
 		
 		for (int i = 0; i < length; i++) {
 			arrayOfX[i] = new FunctionInX(currentStep);
