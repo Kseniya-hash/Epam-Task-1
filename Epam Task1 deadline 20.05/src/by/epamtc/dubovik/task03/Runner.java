@@ -8,14 +8,15 @@
 
 package by.epamtc.dubovik.task03;
 
+import by.epamtc.dubovik.for_all_tasks.InvalidValueException;
 import by.epamtc.dubovik.for_all_tasks.Reader;
 
-public class Test {
+public class Runner {
 	
 	public static void main(String args[]) {
-		double area;			//area of the square
-		double diameter;		//diameter of the circle inscribed in a square
-		double smallerArea;		//area of the square inscribed in a circle
+		double area;			
+		double diameter;		
+		double smallerArea;		
 	
 		System.out.println("Введите площадь квадрата:");
 		try {
@@ -26,8 +27,8 @@ public class Test {
 						  + "Площадь квадрата, вписанного в круг " + smallerArea + "\n"
 						  + "Площадь первого квадрата больше площади второго в "
 						  + Area.calculateRatio(area, smallerArea ) + " раза");
-		} catch (Exception e){
-			System.out.println(e.getMessage());
+		} catch (InvalidValueException e){
+			System.out.println("Площадь квадрате не может быть меньше нуля.");
 		}
 	}
 }

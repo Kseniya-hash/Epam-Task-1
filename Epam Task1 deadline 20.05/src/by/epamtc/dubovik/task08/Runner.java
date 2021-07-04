@@ -10,7 +10,7 @@ package by.epamtc.dubovik.task08;
 
 import by.epamtc.dubovik.for_all_tasks.Reader;
 
-public class Test {
+public class Runner {
 	
 	public static void main(String args[]) {
 		double x;

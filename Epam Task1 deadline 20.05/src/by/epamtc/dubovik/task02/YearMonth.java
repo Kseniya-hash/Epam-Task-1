@@ -3,57 +3,48 @@
  * 
  * 16.05.2021
  * 
- * The solution for task 2.
+ * Составить программу, которая по заданным году и номеру месяца определяет количество дней в этом
+ * месяце и корректно определялись все високосные года.
  */
 
 package by.epamtc.dubovik.task02;
 
+import by.epamtc.dubovik.for_all_tasks.InvalidValueException;
 import by.epamtc.dubovik.for_all_tasks.Validation;
 
-/**
- * class for finding leap years and number of days per month
- * @author Kseniya
- */
 public class YearMonth {
-	/**check if year is leap*/
-	public static boolean isLeapYear(int year) throws Exception{
+	
+	public static boolean isLeapYear(int year) throws InvalidValueException{
+		if (Validation.isNegative(year)) {
+			throw new InvalidValueException("Invalid value for year");
+		}
+		
 		final int REGULARITYOFLEAP = 4; 
 		final int EXCEPTIONYEAR = 100; 
 		final int NOTEXCEPTIONYEAR = 400; 
+		boolean leap = ((year % REGULARITYOFLEAP) == 0);
 		
-		if (Validation.isNegative(year)) {
-			throw new Exception("Invalid value for year");
+		if ((year % EXCEPTIONYEAR) == 0 && (year % NOTEXCEPTIONYEAR) != 0){
+			leap = false;
 		}
-		if ((year % NOTEXCEPTIONYEAR) == 0) {
-			return true;
-		} else if ((year % EXCEPTIONYEAR) == 0){
-			return false;
-		}
-		return (year % REGULARITYOFLEAP) == 0;
+		
+		return leap;
 	}
 	
-	/**find number of days in month*/
-	public static int calculateDaysInMonth(int year, int month) throws Exception {
-		int days = 30;					//Default number of days in month
-		final int DAYSINFEBRUARY = 28;
-		final int FEBRUARY = 2;
-		final int JULY = 7;
-		
+	public static int calculateDaysInMonth(int year, int month) throws InvalidValueException {
 		if (!ValidationForMonth.isMonth(month)) {
-			throw new Exception("Invalid value for month");
+			throw new InvalidValueException("Invalid value for month");
 		}
-		if(month == FEBRUARY) {
-			days = DAYSINFEBRUARY;
-			if (isLeapYear(year)) {
-				days++;
-			}
-			return days;
+		
+		final int DAYSINFEBRUARYLEAP = 29;
+		final int FEBRUARY = 2;
+		int days;
+		
+		days = Month.values()[month - 1].getDays();
+		if((month == FEBRUARY) && isLeapYear(year)) {
+				days = DAYSINFEBRUARYLEAP;
 		}
-		if(month <= JULY) {
-			days += month % 2;
-		} else {
-			days += 1 - month % 2;
-		}
+		
 		return days;
 	}
 }

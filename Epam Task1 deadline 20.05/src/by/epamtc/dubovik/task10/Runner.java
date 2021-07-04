@@ -8,9 +8,10 @@
 
 package by.epamtc.dubovik.task10;
 
+import by.epamtc.dubovik.for_all_tasks.InvalidValueException;
 import by.epamtc.dubovik.for_all_tasks.Reader;
 
-public class Test {
+public class Runner {
 	
 	public static void main(String args[]) {
 		double start;
@@ -24,11 +25,13 @@ public class Test {
 		System.out.println("Введите шаг функции");
 		step = Reader.readDouble();
 		try {
-		FunctionArray array = new FunctionArray(start, finish, step);
+		double[][] array = FunctionArray.tanArray(start, finish, step);
 		System.out.println("Таблица значений:");
-		System.out.println(array.toString());
-		} catch  (Exception e){
-			System.out.println(e.getMessage());
+		for(int i = 0; i < array[0].length; i++) {
+				System.out.printf("%1.8f \t%2.8f\n", array[0][i], array[1][i]);
+		}
+		} catch  (InvalidValueException e){
+			System.out.println("Введены неверные данные");
 		}
 	}
 

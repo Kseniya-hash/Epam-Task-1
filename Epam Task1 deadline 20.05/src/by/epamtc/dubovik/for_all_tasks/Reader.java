@@ -2,14 +2,10 @@ package by.epamtc.dubovik.for_all_tasks;
 
 import java.util.Scanner;
 
-/**
- * Contains methods for reading from console
- * @author Kseniya
- *
- */
+import by.epamtc.dubovik.task07.Point;
+
 public class Reader {
 	
-	/** read integer number from console*/
 	static public int readInt() {
 		Scanner in = new Scanner(System.in);
 		
@@ -19,10 +15,6 @@ public class Reader {
 		return in.nextInt();
 	}
 	
-	/**
-	 * @param length - length of array
-	 * @return read array of integer numbers from console
-	 */
 	static public int[] readArray(int length) {
 		int[] array = new int[length];
 		
@@ -32,7 +24,6 @@ public class Reader {
 		return array;
 	}
 	
-	/** read double number from console*/
 	static public double readDouble() {
 		Scanner in = new Scanner(System.in);
 		
@@ -40,6 +31,15 @@ public class Reader {
 			in.next();
 		}
 		return in.nextDouble();
+	}
+	
+	public static Point readPoint() {
+		Point p;
+		double x = Reader.readDouble();
+		double y = Reader.readDouble();
+		
+		p = new Point(x,y);
+		return p;
 	}
 
 }

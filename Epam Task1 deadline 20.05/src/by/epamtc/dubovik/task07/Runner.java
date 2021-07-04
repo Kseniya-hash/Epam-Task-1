@@ -8,18 +8,20 @@
 
 package by.epamtc.dubovik.task07;
 
-public class Test {
+import by.epamtc.dubovik.for_all_tasks.Reader;
+
+public class Runner {
 	
 	public static void main(String args[]) {
-		Point p1;		//first point
-		Point p2;		//second point
+		Point p1;
+		Point p2;
 		
 		System.out.println("Введите точку:");
-		p1 = PointLogic.readPoint();
+		p1 = Reader.readPoint();
 		System.out.println("Введите точку:");
-		p2 = PointLogic.readPoint();
+		p2 = Reader.readPoint();
 		
-		System.out.println("Точка" + PointLogic.closerToOrigin(p1, p2).toString()
+		System.out.println("Точка" + PointLogic.findCloser(p1, p2).toString()
 						  + " ближе к началу ккоординат.");
 	}
 }

@@ -1,35 +1,43 @@
+/*
+ * Kseniya Dubovik
+ * 
+ * 16.05.2021
+ * 
+ * Составить программу для вычисления значений функции F(x) на отрезке [а, b] с шагом h. Результат
+ * представить в виде таблицы, первый столбец которой – значения аргумента, второй - соответствующие
+ * значения функции.
+ * F(x) = tg(x);
+ */
+
 package by.epamtc.dubovik.task10;
 
+import by.epamtc.dubovik.for_all_tasks.InvalidValueException;
+
 public class FunctionArray {
-	private double start;		//beginning of an interval
-	private double finish;		//end of an interval
-	private double step;		//step in the interval
-	private FunctionInX[] arrayOfX;
 	
-	public FunctionArray(double start, double finish, double step) throws Exception {
-		double currentStep = start;
-		int length = (int)((finish - start) / step + 1);
-		arrayOfX = new FunctionInX[length];
-		this.start = start;
-		this.finish = finish;
-		this.step = step;
-		
-		if(finish < start) {
-			throw new Exception("Invalid argument");
+	public static double[][] tanArray(double start, double end, double step) throws InvalidValueException {
+		if(end < start) {
+			throw new InvalidValueException("Invalid border");
+		}
+		if(step <= 0) {
+			throw new InvalidValueException("Invalid step");
 		}
 		
-		for (int i = 0; i < length; i++) {
-			arrayOfX[i] = new FunctionInX(currentStep);
+		double currentStep = start;
+		int countRows = 2;
+		int lengthOfArray = (int)((end - start) / step + 1);
+		double[][] arrayOfValue = new double[countRows][];
+		
+		for (int i = 0; i < countRows; i++) {
+			arrayOfValue[i] = new double[lengthOfArray];
+		}
+		
+		for (int i = 0; i < lengthOfArray; i++) {
+			arrayOfValue[0][i] = currentStep;
+			arrayOfValue[1][i] = Math.tan(currentStep);
 			currentStep += step;
 		}
-	}
-	
-	public String toString() {
-		String str = new String();
 		
-		for (int i = 0; i < arrayOfX.length; i++) {
-			str+=arrayOfX[i].toString() + "\n";
-		}
-		return str;
+		return arrayOfValue;
 	}
 }

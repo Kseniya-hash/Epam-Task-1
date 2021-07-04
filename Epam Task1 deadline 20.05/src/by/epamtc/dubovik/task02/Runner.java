@@ -8,9 +8,10 @@
 
 package by.epamtc.dubovik.task02;
 
+import by.epamtc.dubovik.for_all_tasks.InvalidValueException;
 import by.epamtc.dubovik.for_all_tasks.Reader;
 
-public class Test {
+public class Runner {
 	
 	public static void main(String args[]) {
 		int year;
@@ -28,8 +29,9 @@ public class Test {
 		}
 		System.out.println("В " + month + " месяце "
 						  + YearMonth.calculateDaysInMonth(year, month) + " дней");	
-		} catch (Exception e){
-			System.out.println(e.getMessage());
+		} catch (InvalidValueException e){
+			System.out.println("Введено не действительное значение для года или месяца.\n"
+					+ "Год должен быть не отрицательным. Месяц от 1 до 12.");
 		}
 	}
 }

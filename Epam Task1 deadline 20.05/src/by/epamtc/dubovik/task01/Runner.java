@@ -9,16 +9,13 @@ package by.epamtc.dubovik.task01;
 
 import by.epamtc.dubovik.for_all_tasks.Reader;
 
-public class Test {
+public class Runner {
 	
 	public static void main(String args[]) {
 		int number;
-		
 		System.out.println("Введите число:");
 		number = Reader.readInt();
-		int lastDigitOfN = LastDigit.calculateLastDigit(number);
 		System.out.println("Последняя цифра квадрата: "
-						   + LastDigit.calculateLastDigitOfsquare(lastDigitOfN));
+						   + LastDigit.calculateLastDigitOfSquare(number));
 	}
-
 }
