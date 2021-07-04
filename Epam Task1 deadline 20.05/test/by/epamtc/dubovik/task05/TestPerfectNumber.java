@@ -1,8 +1,7 @@
 package by.epamtc.dubovik.task05;
 
 import by.epamtc.dubovik.task05.PerfectNumber;
-import org.junit.Test;
-import org.junit.Assert;
+import org.junit.*;
 
 public class TestPerfectNumber {
 	

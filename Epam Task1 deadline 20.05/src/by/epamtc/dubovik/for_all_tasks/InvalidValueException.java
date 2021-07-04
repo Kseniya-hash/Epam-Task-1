@@ -3,7 +3,7 @@ package by.epamtc.dubovik.for_all_tasks;
 public class InvalidValueException extends Exception {
 		
 	public InvalidValueException() {}
-		
+	
 	public InvalidValueException(String s) {
 		super(s);
 	}

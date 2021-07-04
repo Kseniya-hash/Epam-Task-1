@@ -35,6 +35,7 @@ public class Reader {
 	
 	public static Point readPoint() {
 		Point p;
+		
 		double x = Reader.readDouble();
 		double y = Reader.readDouble();
 		

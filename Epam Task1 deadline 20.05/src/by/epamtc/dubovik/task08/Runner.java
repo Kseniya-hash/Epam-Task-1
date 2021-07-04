@@ -3,7 +3,9 @@
  * 
  * 16.05.2021
  * 
- * Testing the solution for task 8.
+ * Вычислить значение функции:
+ * F(x) = -x^2 + 3x +9, x >= 3
+ * F(x) = 1 / (x^3 - 6 ), x < 3
  */
 
 package by.epamtc.dubovik.task08;

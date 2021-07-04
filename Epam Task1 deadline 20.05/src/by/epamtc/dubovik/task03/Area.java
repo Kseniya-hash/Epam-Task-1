@@ -42,7 +42,7 @@ public class Area {
 	public static double calculateRatio(double area1, double area2) throws InvalidValueException {
 		if (Validation.isNegative(area1) || Validation.isNegative(area2)) {
 			throw new InvalidValueException("Invalid value for area. Can not be below zero");
-		}
+		} 
 		if(area2 == 0) {
 			throw new InvalidValueException("Invalid value for area. Can not be zero");
 		}

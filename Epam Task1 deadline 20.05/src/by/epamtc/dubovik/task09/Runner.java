@@ -3,7 +3,7 @@
  * 
  * 16.05.2021
  * 
- * Testing the solution for task 9.
+ * Вычислить длину окружности и площадь круга одного и того же заданного радиуса R.
  */
 
 package by.epamtc.dubovik.task09;

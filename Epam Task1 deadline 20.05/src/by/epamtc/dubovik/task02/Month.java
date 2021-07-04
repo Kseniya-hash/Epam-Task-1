@@ -1,6 +1,7 @@
 package by.epamtc.dubovik.task02;
 
 public enum Month {
+	
 	JANUARY {
 		public int getDays(){
 			final int DAYSINMONTH = 31;

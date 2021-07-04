@@ -1,7 +1,6 @@
 package by.epamtc.dubovik.task08;
 
-import org.junit.Test;
-import org.junit.Assert;
+import org.junit.*;
 
 import by.epamtc.dubovik.task08.Function;
 

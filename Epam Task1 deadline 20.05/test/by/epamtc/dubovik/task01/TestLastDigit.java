@@ -1,12 +1,11 @@
 package by.epamtc.dubovik.task01;
 
-import org.junit.Test;
-import org.junit.Assert;
+import org.junit.*;
 import by.epamtc.dubovik.task01.LastDigit;
 
 public class TestLastDigit {
 	
-	@Test
+	@Test 
 	public void calculateLastDigitOfSquareTestPositive() {
 		int number = 47;
 		int expected = 9;

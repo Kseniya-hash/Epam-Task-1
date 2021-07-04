@@ -36,7 +36,7 @@ public class YearMonth {
 			throw new InvalidValueException("Invalid value for month");
 		}
 		
-		final int DAYSINFEBRUARYLEAP = 29;
+		final int DAYSINFEBRUARYLEAP = 29;  
 		final int FEBRUARY = 2;
 		int days;
 		

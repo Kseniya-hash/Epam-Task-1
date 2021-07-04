@@ -1,12 +1,11 @@
 package by.epamtc.dubovik.task02;
 
-import org.junit.Test;
-import org.junit.Assert;
+import org.junit.*;
 import by.epamtc.dubovik.task02.TestYearMonth;;
 
 public class TestValidationForMonth {
 	
-	@Test
+	@Test 
 	public void isMonthTestMonthInBorder() {
 		int month = 5;
 		boolean expected = true;

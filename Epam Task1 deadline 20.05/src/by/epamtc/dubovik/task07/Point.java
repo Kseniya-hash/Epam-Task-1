@@ -7,11 +7,7 @@
  */
 
 package by.epamtc.dubovik.task07;
-/**
- * Describe a point in two-dimensional coordinate system
- * @author Kseniya
- *
- */
+
 public class Point {
 	private double x;
 	private double y;
